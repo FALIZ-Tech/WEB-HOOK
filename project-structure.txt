@@ -1,0 +1,10 @@
+lumina-multilingual-whatsapp-bot/
+├── app.py
+├── config.py
+├── database.py
+├── language_detector.py
+├── prompt_engine.py
+├── llm_handler.py
+├── whatsapp_utils.py
+├── requirements.txt
+└── README.md          (copy the How to Run section below into this file)
