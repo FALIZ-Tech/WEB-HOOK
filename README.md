@@ -1,4 +1,4 @@
-# Lumina Multilingual WhatsApp LLM Auto-Responder
+# Faliz Multilingual WhatsApp LLM Auto-Responder
 
 **Production-ready Flask webhook for intelligent, language-aware WhatsApp customer support**
 
@@ -6,15 +6,15 @@
 
 ## 1. PROJECT OVERVIEW
 
-**Project Name:** Lumina Multilingual WhatsApp LLM Auto-Responder with Language Context Management
+**Project Name:** Faliz Multilingual WhatsApp LLM Auto-Responder with Language Context Management
 
 **Description:**  
-A complete, production-grade Flask application that extends WhatsApp Business API webhooks with advanced multilingual capabilities. It automatically detects the language of every incoming message using `langdetect`, stores persistent per-user language preferences and per-message language metadata in SQLite, dynamically constructs culturally-aware system prompts for the LLM (including explicit code-switching mirroring), maintains full conversation history across language switches, and provides graceful fallback for unsupported languages while logging them for future expansion.
+A complete, production-grade Flask application that extends WhatsApp Business API webhooks with advanced multilingual capabilities. It automatically detects the language of every incoming message, maintains per-user language preferences, and crafts contextually aware responses that feel native to each language.
 
-The bot maintains a consistent friendly-professional personality ("Lumina") across English, Spanish, French, and Portuguese, delivering natural, non-machine-translated responses.
+The bot maintains a consistent friendly-professional personality ("Faliz") across English, Spanish, French, and Portuguese, delivering natural, non-machine-translated responses.
 
 **Primary Goal:**  
-Enable seamless, context-preserving multilingual conversations on WhatsApp with zero friction for users, minimal operational overhead, and reliable performance on resource-constrained platforms such as PythonAnywhere Basic tier.
+Enable seamless, context-preserving multilingual conversations on WhatsApp with zero friction for users, minimal operational overhead, and reliable performance on resource-constrained platforms such as PythonAnywhere.
 
 ---
 
@@ -53,7 +53,7 @@ Enable seamless, context-preserving multilingual conversations on WhatsApp with 
 ## 4. PROJECT STRUCTURE
 
 ```
-lumina-multilingual-whatsapp-bot/
+faliz-multilingual-whatsapp-bot/
 ├── app.py                  # Main Flask application + webhook routes
 ├── config.py               # All configuration, env vars, language constants
 ├── database.py             # SQLite schema, CRUD functions, connection helper
@@ -79,16 +79,16 @@ lumina-multilingual-whatsapp-bot/
 1. **Create a new Web App**
    - PythonAnywhere → Web → Add a new web app
    - Choose **Flask** → Python 3.10 (or latest available)
-   - Name it something like `lumina-whatsapp-bot`
+   - Name it something like `faliz-whatsapp-bot`
 
 2. **Upload the code**
    - Go to the **Files** tab
-   - Create the folder `lumina-multilingual-whatsapp-bot`
+   - Create the folder `faliz-multilingual-whatsapp-bot`
    - Upload all 8 files listed above (you can drag & drop or use the file manager)
 
 3. **Install dependencies** (Bash console)
    ```bash
-   cd lumina-multilingual-whatsapp-bot
+   cd faliz-multilingual-whatsapp-bot
    pip3.10 install -r requirements.txt
    ```
 
@@ -124,7 +124,7 @@ Your bot is now live!
 ### Local Development (with ngrok)
 
 ```bash
-cd lumina-multilingual-whatsapp-bot
+cd faliz-multilingual-whatsapp-bot
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -186,7 +186,7 @@ Bot: ¡Hola! Claro que sí, vamos a resetear tu password ahora mismo...
 
 ### Test Flow 3: Language switch mid-conversation
 ```
-User: Hi, my order #3921 hasn’t arrived yet
+User: Hi, my order #3921 hasn't arrived yet
 Bot: Hello! I'm sorry to hear that... (in English)
 User: Ya pasaron 5 días, por favor revisa
 Bot: Entendido, voy a verificar el estado del pedido #3921... (switches to Spanish but keeps order context)
@@ -204,7 +204,7 @@ Bot: I detected you're writing in German. I currently support English, Spanish, 
 User: Bonjour, je voudrais annuler mon abonnement
 Bot: Bonjour ! Je suis là pour vous aider... (in French, stores preference)
 (Next day)
-User: C’est fait ?
+User: C'est fait ?
 Bot: Oui, votre abonnement a bien été annulé... (remembers previous context in French)
 ```
 
@@ -246,7 +246,7 @@ The system is designed to stay well within PythonAnywhere free/basic resource li
 
 All code is complete, modular, and ready to deploy. No placeholders or TODOs remain.
 
-Enjoy building multilingual experiences with Lumina! 🚀
+Enjoy building multilingual experiences with Faliz! 🚀
 
 ---
 
