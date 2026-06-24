@@ -95,7 +95,7 @@ def webhook():
 
 @app.route("/")
 def health():
-    return "Lumina Multilingual WhatsApp Bot is running perfectly."
+    return "Faliz Multilingual WhatsApp Bot is running perfectly."
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
